@@ -1,9 +1,6 @@
-#require 'articles_controller'
-require_relative './articles_controller'
-
 class CommentsController < ApplicationController
 
-  #before_action :find_elements, only: [:create, :destroy]
+
 
   http_basic_authenticate_with name: "abcdeg", password: "secret", only: :destroy
 
