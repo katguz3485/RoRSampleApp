@@ -10,8 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-
-    #@article = Article.order("created_at DESC").limit(4).offset(1)
+    @comments = @article.comments
   end
 
   def new
@@ -24,9 +23,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article, notice: "The post was succesfully created"
     else
-
       flash[:notice] = "Error"
-
       render 'new'
     end
   end
@@ -51,19 +48,12 @@ class ArticlesController < ApplicationController
     @article = Article.destroy(params[:id])
     flash[:notice] = "Succesfully deleted post"
     redirect_to root_path, notice: "Post was destroyed"
-
-
   end
+
 
   def find_article
     @article = Article.find(params[:id])
   end
-
-=begin
-  def article_params
-    params.require(:article).permit(:title, :description)
-  end
-=end
 
 end
 
