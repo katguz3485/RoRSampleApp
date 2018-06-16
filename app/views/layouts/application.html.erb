@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RoRSampleApp</title>
+  <title>RoR SampleApp</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -15,7 +15,11 @@
   <ul>
     <li><%= msg %></li>
   </ul>
+
 <% end %>
-<%= yield %>
+<%= render 'layouts/navigation' %>
+<div class="container">
+  <%= yield %></div>
+
 </body>
 </html>
