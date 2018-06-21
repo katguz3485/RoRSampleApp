@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+
   end
 
   def show
@@ -19,7 +20,9 @@ class ArticlesController < ApplicationController
 
 
   def create
+
     @article = Article.new(article_params)
+    @article.user = User.first
     if @article.save
       flash[:success] = "The post was succesfully created"
       redirect_to @article
