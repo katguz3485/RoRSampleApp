@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
   resources :users, except: [:new]
-  root 'articles#index'
-  get 'pages/index'
-  get 'signup', to: 'users#new'
+  resources :pages
+  root 'pages#index'
+   get 'signup', to: 'users#new'
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+
   get 'about', to: 'pages#about'
   resources :articles do
     resources :comments

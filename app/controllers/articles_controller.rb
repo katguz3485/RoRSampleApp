@@ -7,11 +7,13 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 5)
 
   end
 
   def show
     @comments = @article.comments
+    @user = @article.user
   end
 
   def new
