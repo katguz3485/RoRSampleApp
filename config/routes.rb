@@ -1,22 +1,19 @@
 Rails.application.routes.draw do
 
+
+  root 'pages#index'
+
   resources :users, except: [:new]
   resources :pages
-  root 'pages#index'
-   get 'signup', to: 'users#new'
+  get 'signup', to: 'users#new'
 
-  controller :sessions do
-    get 'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
-  end
-
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   get 'about', to: 'pages#about'
   resources :articles do
     resources :comments
-
-
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
