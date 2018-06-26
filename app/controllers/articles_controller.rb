@@ -2,8 +2,9 @@ class ArticlesController < ApplicationController
   include ArticlesHelper
 
   before_action :find_article, only: [:show, :edit, :update, :delete]
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "abcdeg", password: "secret", except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -22,7 +23,6 @@ class ArticlesController < ApplicationController
 
 
   def create
-
     @article = Article.new(article_params)
     @article.user = User.first
     if @article.save
@@ -61,5 +61,13 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def require_same_user
+    if current_user != @article.user
+      flash[:danger] = "You can only edit, update ord delete your own article"
+      redirect_to root_path
+
+    end
+
+  end
 end
 

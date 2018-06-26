@@ -10,7 +10,6 @@
       </button>
       <%= link_to "RoR Sample App", root_path, class: 'navbar-brand', id: "logo" %>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -21,12 +20,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions
             <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
             <li>
               <%= link_to "New Article", new_article_path %>
             </li>
-            <li><a href="#">Another action</a></li>
-
           </ul>
         </li>
       </ul>
@@ -47,8 +43,6 @@
 
               <li><%= link_to "View your profile", user_path(current_user) %></li>
 
-              <li><a href="#">Something else here</a></li>
-
               <li role="separator" class="divider"></li>
 
               <li><a href="#">Separated link</a></li>
@@ -66,9 +60,7 @@
         <% end %>
 
       </ul>
-
-
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>

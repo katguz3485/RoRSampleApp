@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root 'pages#index'
+  root 'pages#home'
 
   resources :users, except: [:new]
   resources :pages
