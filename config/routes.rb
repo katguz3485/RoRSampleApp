@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
   root 'pages#home'
-
+  resources :categories, except: [:destroy]
   resources :users, except: [:new]
   resources :pages
   get 'signup', to: 'users#new'
