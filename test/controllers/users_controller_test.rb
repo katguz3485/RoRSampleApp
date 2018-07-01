@@ -11,7 +11,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_user_url
+    get users_path(@user)
     assert_response :success
   end
 
@@ -19,7 +19,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_difference('User.count') do
       post users_url, params: { user: { email: @user.email, username: @user.username } }
     end
-
     assert_redirected_to user_url(User.last)
   end
 
