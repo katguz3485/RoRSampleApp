@@ -42,7 +42,8 @@
   background-color: black;
 
 }
-.article-meta-details{
+
+.article-meta-details {
   border-top: 1px solid #eaeaea;
   margin-top: 15px;
 
@@ -78,12 +79,25 @@
 
 }
 
-.pagination-wrapper{
+.pagination-wrapper {
   margin: 0 auto;
   text-align: center;
   float: right;
   right: 45%;
   position: relative;
+}
+
+.badge {
+  background-color: #CEF6F5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.input_checkbox input {
+  width: auto !important;
+
+
 }
 
 footer {
