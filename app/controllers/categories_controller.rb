@@ -1,9 +1,7 @@
 class CategoriesController < ApplicationController
   include CategoriesHelper
-
-  before_action :find_category, only: [:show]
+  before_action :find_category, only: [:show, :edit, :update, :delete]
   before_action :require_admin, except: [:index, :show]
-
 
   def index
     # @categories = Category.all
@@ -27,11 +25,21 @@ class CategoriesController < ApplicationController
 
   def show
     @category_articles = @category.articles.paginate(page: params[:page], per_page: 5)
+  end
+
+  def edit
+
 
   end
 
-  def find_category
-    @category = Category.find(params[:id])
+  def update
+    flash[:success] = "Category was updated"
+    if @category.update(category_params)
+      redirect_to @category
+    else
+      flash.now[:danger] = "Error occcured"
+      render 'edit'
+    end
   end
 
 
@@ -40,6 +48,11 @@ class CategoriesController < ApplicationController
       flash[:danger] = "Only admins can perform this action"
       redirect_to categories_path
     end
-
   end
+
+
+  def find_category
+    @category = Category.find(params[:id])
+  end
+
 end

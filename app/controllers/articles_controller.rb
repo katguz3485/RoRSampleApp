@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to @article
     else
-      flash.now[:danger] = "Error"
+      flash.now[:danger] = "Error during updating article occured"
       render 'edit'
     end
   end
