@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bdcc8d7-7198-4cf7-9929-4d824d95dc82" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/untitled1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/articles_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/articles_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,8 +85,8 @@
       <file leaf-file-name="articles_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/articles_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+            <state relative-caret-position="253">
+              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -700,7 +697,7 @@
       <workItem from="1530381824960" duration="7336000" />
       <workItem from="1530391247102" duration="8882000" />
       <workItem from="1530439129158" duration="20076000" />
-      <workItem from="1530474917766" duration="9346000" />
+      <workItem from="1530474917766" duration="9876000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1528201862785</created>
@@ -773,13 +770,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346494000" />
+    <option name="totallyTimeSpent" value="347024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="345" y="27" width="1021" height="741" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8117647" visible="true" weight="0.25230768" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8117647" visible="true" weight="0.25230768" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.16657443" side_tool="true" weight="0.21215352" />
@@ -788,7 +784,7 @@
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49252906" weight="0.25704622" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.26498422" />
       <window_info id="Structure" order="1" sideWeight="0.20852359" side_tool="true" weight="0.31536606" />
-      <window_info anchor="bottom" x="67" y="532" width="1299" height="213" id="Terminal" order="14" sideWeight="0.8334256" visible="true" weight="0.31891027" />
+      <window_info active="true" anchor="bottom" x="67" y="532" width="1299" height="213" id="Terminal" order="14" sideWeight="0.8334256" visible="true" weight="0.31891027" />
       <window_info id="Favorites" order="2" sideWeight="0.1882353" side_tool="true" visible="true" weight="0.25230768" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="SVN Repositories" order="12" weight="0.329718" />
@@ -1185,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/articles_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+        <state relative-caret-position="253">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
         </state>
       </provider>
     </entry>
