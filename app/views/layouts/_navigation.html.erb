@@ -24,11 +24,8 @@
             <% Category.all.each do |category| %>
               <li><%= link_to "#{category.name}".titleize, category_path(category) %></li>
             <% end %>
-            <% def check_if_admin_and_logged_in
-                 if logged_in? and current_user.admin?
-               end   %>
-              <%=check_if_admin_and_logged_in %>
-              <li> <%= link_to "Create New Category", new_category_path %> </li>
+            <% if logged_in? and current_user.admin? %>
+            <li> <%= link_to "Create New Category", new_category_path %> </li>
             <% end %>
 
           </ul>
