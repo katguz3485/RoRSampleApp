@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_07_01_095200) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
     t.integer "category_id"
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 2018_07_01_095200) do
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
-    t.integer "article_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
@@ -47,10 +50,11 @@ ActiveRecord::Schema.define(version: 2018_07_01_095200) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "{:index=>true}_id"
+    t.bigint "{:index=>true}_id"
     t.string "password_digest"
     t.boolean "admin", default: false
     t.index ["{:index=>true}_id"], name: "index_users_on_{:index=>true}_id"
   end
 
+  add_foreign_key "comments", "articles"
 end
