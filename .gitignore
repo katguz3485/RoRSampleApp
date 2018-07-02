@@ -4,27 +4,40 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
+# Ignore bundler config
 /.bundle
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/log/*.log
+/tmp
+.DS_Store
+coverage/*
+public/uploads/*
+public/caches
+.sass-cache
+public/partner
+.vagrant
+ubuntu-xenial-16.04-cloudimg-console.log
+*.rdb
+current_stolen_bikes.tsv
+spec/fixtures/tsv_creation/*.tsv
+spec/fixtures/tsv_creation/*.json
 
-# Ignore uploaded files in development
-/storage/*
+# Ignore rvm stuff
+.rvmrc
+.ruby-gemset
+.ruby-version
+.powenv
 
-/node_modules
-/yarn-error.log
+# Ignore Chef stuff
+Cheffile.lock
+cookbooks/*
 
-/public/assets
-.byebug_history
+# Ignore localeapp
+.localeapp
+log/localeapp.yml
 
-# Ignore master key for decrypting credentials and more.
-/config/master.key
+# Ignore import files
+sm_import_*.json
+spec/fixtures/bikes/*.json
+manufacturer.tsv
