@@ -4,8 +4,8 @@ development:
  host: localhost
  database: project_development
  pool: 5
- username: alice
- password: AwEs0Me!
+ username: pguser
+ password: password
 
 
 test: &TEST
@@ -14,16 +14,16 @@ test: &TEST
  host: localhost
  database: project_test
  pool: 5
- username: alice
- password: AwEs0Me!
+ username: pguser
+ password: password
 
 production:
  adapter: postgresql
  encoding: utf8
  database: project_production
  pool: 5
- username: alice
- password: AwEs0Me!
+ username: pguser
+ password: password
 
 cucumber:
   <<: *TEST

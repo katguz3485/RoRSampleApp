@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bdcc8d7-7198-4cf7-9929-4d824d95dc82" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/categories/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/categories/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/about.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/about.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/pages/about.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -104,7 +100,7 @@
       <file leaf-file-name="_navigation.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
+            <state relative-caret-position="522">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
@@ -120,6 +116,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -214,13 +219,13 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/storage.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/views/categories/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/articles/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/articles/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/categories/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pages/about.html.erb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -246,11 +251,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="357" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="205" />
     <option name="y" value="27" />
-    <option name="width" value="863" />
-    <option name="height" value="741" />
+    <option name="width" value="1161" />
+    <option name="height" value="732" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -258,6 +263,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,13 +306,17 @@
             <path>
               <item name="RoRSampleApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="RoRSampleApp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoRSampleApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoRSampleApp" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -670,7 +680,8 @@
       <workItem from="1530439129158" duration="20076000" />
       <workItem from="1530474917766" duration="17262000" />
       <workItem from="1530550349902" duration="7169000" />
-      <workItem from="1530558889537" duration="7200000" />
+      <workItem from="1530558889537" duration="8267000" />
+      <workItem from="1530568452256" duration="7929000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1528201862785</created>
@@ -743,29 +754,30 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368779000" />
+    <option name="totallyTimeSpent" value="377775000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="205" y="27" width="1161" height="732" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7438795" visible="true" weight="0.2585794" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7438795" visible="true" weight="0.29596412" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21388668" side_tool="true" weight="0.1517572" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2161435" side_tool="true" visible="true" weight="0.33495936" />
       <window_info anchor="right" id="Database" order="3" weight="0.06783719" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49252906" weight="0.25704622" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26498422" />
       <window_info id="Structure" order="1" sideWeight="0.20852359" side_tool="true" weight="0.31536606" />
-      <window_info active="true" anchor="bottom" x="67" y="532" width="1299" height="213" id="Terminal" order="14" sideWeight="0.7861133" visible="true" weight="0.45865834" />
+      <window_info active="true" anchor="bottom" x="67" y="532" width="1299" height="213" id="Terminal" order="14" sideWeight="0.7838565" visible="true" weight="0.33495936" />
       <window_info id="Favorites" order="2" sideWeight="0.25612053" side_tool="true" weight="0.25937748" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="SVN Repositories" order="12" weight="0.329718" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26498422" />
       <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.63238513" weight="0.46178344" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" x="0" y="0" width="136" height="538" id="Documentation" order="4" side_tool="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32912722" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -776,25 +788,25 @@
       <window_info anchor="bottom" id="SVN Repositories" order="12" weight="0.329718" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49252906" weight="0.25704622" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26498422" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7438795" visible="true" weight="0.25937748" />
       <window_info id="Structure" order="1" sideWeight="0.20852359" side_tool="true" weight="0.31536606" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26498422" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49493927" weight="0.3256059" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.63238513" weight="0.46178344" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" x="0" y="0" width="136" height="538" id="Documentation" order="4" side_tool="true" weight="0.32857144" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.06783719" />
-      <window_info anchor="bottom" x="67" y="532" width="1299" height="213" id="Terminal" order="14" sideWeight="0.7861133" visible="true" weight="0.1517572" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21388668" side_tool="true" visible="true" weight="0.1517572" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.63238513" weight="0.46178344" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32912722" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21388668" side_tool="true" visible="true" weight="0.1517572" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49252906" weight="0.25704622" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49493927" weight="0.3256059" />
+      <window_info anchor="bottom" x="67" y="532" width="1299" height="213" id="Terminal" order="14" sideWeight="0.7861133" visible="true" weight="0.1517572" />
       <window_info id="Favorites" order="2" sideWeight="0.25612053" side_tool="true" visible="true" weight="0.25937748" />
     </layout-to-restore>
   </component>
@@ -975,13 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="24" selection-start-line="24" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/article_category.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1122,7 +1127,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
+        <state relative-caret-position="522">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
@@ -1133,7 +1138,14 @@
     <entry file="file://$PROJECT_DIR$/app/views/pages/about.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>
