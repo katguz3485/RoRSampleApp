@@ -71,4 +71,3 @@ class ArticlesController < ApplicationController
 
 
 end
-

@@ -4,9 +4,8 @@ development:
  host: localhost
  database: project_development
  pool: 5
- username: pguser
+ username: postgres
  password: password
-
 
 test: &TEST
  adapter: postgresql
@@ -14,7 +13,7 @@ test: &TEST
  host: localhost
  database: project_test
  pool: 5
- username: pguser
+ username: postgres
  password: password
 
 production:
@@ -22,7 +21,7 @@ production:
  encoding: utf8
  database: project_production
  pool: 5
- username: pguser
+ username: postgres
  password: password
 
 cucumber:

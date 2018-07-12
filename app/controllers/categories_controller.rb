@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
   include CategoriesHelper
+  expose (:category)
+  expose (:categories)
+
   before_action :find_category, only: [:show, :edit, :update, :delete]
   before_action :require_admin, except: [:index, :show]
 
