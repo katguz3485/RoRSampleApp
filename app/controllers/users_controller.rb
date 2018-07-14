@@ -1,25 +1,31 @@
 class UsersController < ApplicationController
+
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :require_admin, only: [:destroy]
 
+  expose (:user)
+  expose (:users) { User.paginate(page: params[:page], per_page: 2)}
+
+
 
   def new
-    @user = User.new
+    #@user = User.new
   end
 
   def index
-    @users = User.all
-    @users = User.paginate(page: params[:page], per_page: 2)
+    #users = User.all
+
   end
 
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      session[:user_id] = @user.id
-      flash.now[:success] = "Welcome in our blog #{@user.username}"
-      redirect_to user_path(@user)
+   # @user = User.new(user_params)
+    if user.save
+      session[:user_id] = user.id
+      flash.now[:success] = "Welcome in our blog #{user.username}"
+      redirect_to user_path(user)
     else
       render 'new'
     end
@@ -31,7 +37,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    if user.update(user_params)
       flash[:success] = "Your account was succcesfully updated"
       redirect_to articles_path
     else
@@ -43,12 +49,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
+    @user_articles = user.articles.paginate(page: params[:page], per_page: 5)
 
   end
 
   def destroy
-    @user.destroy
+    user.destroy
     flash[:danger] = "User and all articles created by user have been deletd"
     redirect_to users_path
   end
@@ -56,7 +62,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    user = User.find(params[:id])
   end
 
 
@@ -65,7 +71,7 @@ class UsersController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @user and !current_user.admin?
+    if current_user != user and !current_user.admin?
       flash[:danger] = "You can only edit your own account"
       redirect_to root_path
     end

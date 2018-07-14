@@ -1,23 +1,21 @@
 class CategoriesController < ApplicationController
   include CategoriesHelper
+
   expose (:category)
-  expose (:categories)
+  expose (:categories) { Category.paginate(page: params[:page], per_page: 5)}
+  expose (:category_articles) {category.articles.paginate(page: params[:page], per_page: 5)}
 
   before_action :find_category, only: [:show, :edit, :update, :delete]
   before_action :require_admin, except: [:index, :show]
 
   def index
-    # @categories = Category.all
-    @categories = Category.paginate(page: params[:page], per_page: 5)
   end
 
   def new
-    @category = Category.new
   end
 
   def create
-    @category = Category.new(category_params)
-    if @category.save
+    if category.save
       flash[:success] = "The category was succesfully created"
       redirect_to categories_path
     else
@@ -27,18 +25,16 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category_articles = @category.articles.paginate(page: params[:page], per_page: 5)
+    #@category_articles = category.articles.paginate(page: params[:page], per_page: 5)
   end
 
   def edit
-
-
   end
 
   def update
     flash[:success] = "Category was updated"
-    if @category.update(category_params)
-      redirect_to @category
+    if category.update(category_params)
+      redirect_to category
     else
       flash.now[:danger] = "Error occcured"
       render 'edit'
@@ -55,7 +51,7 @@ class CategoriesController < ApplicationController
 
 
   def find_category
-    @category = Category.find(params[:id])
+    category = Category.find(params[:id])
   end
 
 end
