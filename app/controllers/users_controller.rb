@@ -5,23 +5,18 @@ class UsersController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :require_admin, only: [:destroy]
 
-  expose (:user)
-  expose (:users) { User.paginate(page: params[:page], per_page: 2)}
-
+  expose_decorated (:user)
+  expose_decorated (:users) {User.paginate(page: params[:page], per_page: 2)}
 
 
   def new
-    #@user = User.new
+
   end
 
   def index
-    #users = User.all
-
   end
 
-
   def create
-   # @user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
       flash.now[:success] = "Welcome in our blog #{user.username}"

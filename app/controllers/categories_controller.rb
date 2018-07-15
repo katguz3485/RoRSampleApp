@@ -1,12 +1,13 @@
 class CategoriesController < ApplicationController
   include CategoriesHelper
 
-  expose (:category)
-  expose (:categories) { Category.paginate(page: params[:page], per_page: 5)}
-  expose (:category_articles) {category.articles.paginate(page: params[:page], per_page: 5)}
 
   before_action :find_category, only: [:show, :edit, :update, :delete]
   before_action :require_admin, except: [:index, :show]
+
+  expose_decorated (:category)
+  expose_decorated (:categories) { Category.paginate(page: params[:page], per_page: 5) }
+  expose_decorated (:category_articles) { category.articles.paginate(page: params[:page], per_page: 5) }
 
   def index
   end
@@ -25,7 +26,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    #@category_articles = category.articles.paginate(page: params[:page], per_page: 5)
+
   end
 
   def edit
@@ -53,5 +54,13 @@ class CategoriesController < ApplicationController
   def find_category
     category = Category.find(params[:id])
   end
+
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name)
+  end
+
 
 end
