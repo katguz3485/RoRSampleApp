@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_action :require_admin, only: [:destroy]
 
   expose_decorated (:user)
-  expose_decorated (:users) {User.paginate(page: params[:page], per_page: 2)}
+  expose_decorated (:users) { User.paginate(page: params[:page], per_page: 2)}
 
 
   def new

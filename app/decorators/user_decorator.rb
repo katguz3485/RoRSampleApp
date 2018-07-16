@@ -2,6 +2,7 @@ class UserDecorator < ApplicationDecorator
   include Draper::LazyHelpers
   delegate_all
   decorates :user
+  decorates_associations :article
 
   # Define presentation-specific methods here. Helpers are accessed through
   # `helpers` (aka `h`). You can override attributes, for example:
@@ -12,21 +13,15 @@ class UserDecorator < ApplicationDecorator
   #     end
   #   end
 
-  def gravatar_for(user, options = {size: 80})
 
-    gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
-
-    size = options[:size]
-
-    gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
-
-    image_tag(gravatar_url, alt: user.username, class: "img-circle")
-
+  def link_to_edit_path
+    link_to 'Edit', edit_user_path(user)
   end
 
 
-
-
+  def link_to_back
+    link_to 'Back', users_path
+  end
 
 
 end

@@ -11,7 +11,7 @@
           </li>
           <li>
             <small>
-              <%= pluralize(article.user.articles.count, "article") if article.user.articles %>
+              <%= article.pluralize_article_count %>
             </small>
           </li>
         </div>
@@ -27,7 +27,7 @@
   <div class="article-actions">
     <% article.check_if_logged_in_and_has_privileges %>
     <%= article.link_to_editing_article_path %>
-    <%= article.link_to_deleting_article_path %>
+    <%= article.link_to_delete_article %>
     <%= article.link_to_view_article_path %>
   </div>
 </div>

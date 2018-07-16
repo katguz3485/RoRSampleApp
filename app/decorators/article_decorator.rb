@@ -2,6 +2,7 @@ class ArticleDecorator < ApplicationDecorator
   include Draper::LazyHelpers
   delegate_all
   decorates :article
+  decorates_associations :comment, :category, :article_category
   decorates_finders
 
   # Define presentation-specific methods here. Helpers are accessed through
@@ -38,15 +39,26 @@ class ArticleDecorator < ApplicationDecorator
     end
   end
 
+  def pluralize_article_count
+    pluralize(article.user.articles.count, "article") if article.user.articles
+  end
+
   def link_to_editing_article_path
     link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary"
   end
 
-  def link_to_deleting_article_path
+  def link_to_delete_article
     link_to "Delete this article", article_path(article), method: :delete,
             data: {confirm: "Are you sure you want to delete the article?"},
             class: "btn btn-xs btn-danger"
   end
+
+  def link_to_create_article
+    link_to "Create new article", new_article_path(article), class: "btn btn-xs btn-primary"
+  end
+
+
+
 
   def link_to_view_article_path
     link_to "View all articles", articles_path, class: "btn btn-xs btn-success"
