@@ -32,20 +32,28 @@ class ArticleDecorator < ApplicationDecorator
     end
   end
 
-  def check_if_logged_in_and_user_privileges
+  def check_if_logged_in_and_has_privileges
     if logged_in? && (current_user == article.user || current_user.admin?)
 
     end
   end
 
-  def link_to_article_editing_path
-    link_to_params("Edit this article", edit_article_path(article))
+  def link_to_editing_article_path
+    link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary"
   end
 
+  def link_to_deleting_article_path
+    link_to "Delete this article", article_path(article), method: :delete,
+            data: {confirm: "Are you sure you want to delete the article?"},
+            class: "btn btn-xs btn-danger"
+  end
+
+  def link_to_view_article_path
+    link_to "View all articles", articles_path, class: "btn btn-xs btn-success"
+  end
 
   private
-
-  def link_to_params(*params)
+   def link_to_params(*params)
     link_to params
   end
 
