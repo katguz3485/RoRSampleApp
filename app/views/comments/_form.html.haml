@@ -1,0 +1,15 @@
+.col-lg-6
+  .row
+    = simple_form_for [article, article.comments.build] do |f|
+      .col-lg-6
+        .row
+          .form-group
+            .col-lg-12
+              =f.text_field :commenter, class: "form-control", placeholder: "Your name"
+            .form-group
+              .col-lg-12
+                = f.text_area :body, class: "form-control", placeholder: "Your comment"
+            .form-group
+              .col-lg-12
+                = f.button :submit, class: "btn btn success"
+

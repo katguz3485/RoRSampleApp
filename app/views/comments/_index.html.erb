@@ -1,0 +1,17 @@
+<h1>Comments for <%= article.title %></h1>
+
+<div class="comment">
+  <h8>
+<!--    <%# if comment.commenter %>
+      <%#= link_to comment.commenter, user_path(comment.user_id) %>
+    <%# else %>-->
+      <%= comment.commenter %>
+
+
+  </h8>
+  <p class="text"><%= comment.body %></p>
+</div>
+
+<%= link_to 'Delete ' %>
+  <%= link_to 'New comment', new_article_comment_path(article) %>
+<%= link_to 'Back to Post', article %>

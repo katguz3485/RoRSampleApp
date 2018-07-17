@@ -43,6 +43,7 @@ class ArticleDecorator < ApplicationDecorator
     pluralize(article.user.articles.count, "article") if article.user.articles
   end
 
+  # //TODO create general method for link to
   def link_to_editing_article_path
     link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary"
   end
@@ -56,8 +57,6 @@ class ArticleDecorator < ApplicationDecorator
   def link_to_create_article
     link_to "Create new article", new_article_path(article), class: "btn btn-xs btn-primary"
   end
-
-
 
 
   def link_to_view_article_path

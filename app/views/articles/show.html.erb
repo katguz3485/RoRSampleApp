@@ -22,12 +22,15 @@
   <hr>
   <%= simple_format(article.description) %>
   <% article.check_model_has_categories %>
-  <p> Categories: <%= render article.categories %> </p>
-
+  <p> Categories:
+    <%= render article.categories %> </p>
   <div class="article-actions">
     <% article.check_if_logged_in_and_has_privileges %>
     <%= article.link_to_editing_article_path %>
     <%= article.link_to_delete_article %>
     <%= article.link_to_view_article_path %>
+    <%= render 'comments/new' %>
+    <%= render partial: 'comments/list', locals: { comments: article.comments } %>
+
   </div>
 </div>
