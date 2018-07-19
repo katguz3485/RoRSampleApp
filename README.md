@@ -1,4 +1,5 @@
 # README
+*[![Build Status](https://travis-ci.org/katguz3485/RoRSampleApp.svg?branch=master)](https://travis-ci.org/katguz3485/RoRSampleApp)
 
 Link to the app (heroku): https://still-ravine-13876.herokuapp.com
 
